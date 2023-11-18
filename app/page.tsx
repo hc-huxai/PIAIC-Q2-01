@@ -1,7 +1,6 @@
 import Banner from "@/components/banner";
 import logo from "@/assets/img/panaverse-logo.png";
 import Image from "next/image";
-import { textData } from "@/data/text";
 
 export default function Home() {
   return (
