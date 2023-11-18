@@ -1,29 +1,44 @@
 import Banner from "@/components/banner";
-import logo from "@/assets/img/panaverse-logo.png";
-import Image from "next/image";
+import GeneratedData from "@/components/generated";
+import EmbeddedYTVideo from "@/components/youtube-video";
 
 export default function Home() {
   return (
     <div>
       <Banner />
+
       <main className="w-[64rem] max-w-full mx-auto py-8 px-24 flex flex-col space-y-5">
-        <h1 className="font-color-green text-[2em]">
-          Certified Web 3.0 and Metaverse Developer: A Nationwide Program in
-          Karachi, Lahore, Islamabad, and Peshawar
-        </h1>
-        <Image src={logo} alt="panaverse" />
-        <h2 className="font-color-green text-2xl leading-normal">
-          The Future of the Web is Web 3.0, Metaverse, and Edge Computing.
-          Panaverse DAO is a movement to spread these technologies globally. It
-          is community of Web 3 and Metaverse developers, designers, trainers,
-          startup founders and service providers.
-        </h2>
-        <a href="#" className="text-blue-900 text-2xl block">
-          Admissions Now Open in Karachi, Lahore, Islamabad, and Peshawar
-        </a>
-        <a href="#" className="text-blue-900 text-lg block">
-          This document on Google Docs
-        </a>
+        <GeneratedData />
+
+        <hr />
+        <p className="text-[1.2rem] text-center">
+          And So on... For more info, visit the original{" "}
+          <a href="https://www.panaverse.co" className="text-blue-900">
+            panaverse.co
+          </a>
+        </p>
+        <hr />
+
+        <section className="w-full mx-auto flex flex-col space-y-5 mb-4">
+          <h1 className="text-center text-2xl font-bold">Video from Youtube</h1>
+          <EmbeddedYTVideo
+            videoSlug="PKxSC4ZG3W0"
+            width={"432"}
+            height={"243"}
+            className="mx-auto"
+          />
+        </section>
+        <hr />
+
+        {/* <section className="w-full mx-auto flex flex-col space-y-5 mb-4">
+          <h1 className="text-center text-2xl font-bold">Video from Youtube</h1>
+          <video width="320" height="240" controls>
+            <source src="/assets/video/mov_bbb.mp4" type="video/mp4" />
+            <source src="/assets/video/mov_bbb.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <hr /> */}
       </main>
     </div>
   );
